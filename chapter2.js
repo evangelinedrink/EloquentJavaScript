@@ -124,3 +124,73 @@ for (let number3=0; number3 <=12; number3+=2) {
 }
 
 //Dispatching on a value with Switch
+switch(prompt("What is the weather like?")) {
+  case "rainy":
+    console.log("Remember to bring an umbrella.");
+    break;
+  case "sunny":
+    console.log("Dress lightly."); //For sunny weather, the console log will say "Dress lighty." and "Go outside."
+  case "cloudy":
+    console.log("Go outside.");
+    break;
+  default:
+    console.log("Unknown weather type!");
+    break;
+  }
+
+  //Exercise: Looping a Triangle
+//As an array
+for(let triangle=["#"]; triangle.length<=7;) {
+  console.log(triangle);
+  triangle.push("#");
+}
+
+//Not as an array
+for(let triangle2="#"; triangle2.length<=7; triangle2+="#") {
+  console.log(triangle2);
+}
+
+//Exercise: FizzBuzz
+for(let numberFB=1; numberFB<=100; numberFB++) {
+  if ((numberFB % 3 ===0) && (numberFB % 5 ===0)) {
+    console.log("FizzBuzz");
+  } else if(numberFB % 5 ===0) {
+    console.log("Buzz");
+  } else if(numberFB % 3 ===0) {
+    console.log("Fizz");
+  } else {
+    console.log(numberFB);
+  } 
+}
+
+//Exercise: Chessboard
+//Use a switch statement with continue to only show the value when we have 8 positions on the board.
+let CB=" #"
+for(CB; CB.length<8; CB+=" #") {
+}
+console.log(CB);
+
+let CB2="# "
+for(CB2; CB2.length<8; CB2+="# ") {
+}
+console.log(CB2);
+
+for(let init=0; init<8; init++) {
+  console.log(CB + "\n" + CB2);
+}
+
+//Any size board
+let size= 8; 
+let board= " ";
+
+for(let x1=0; x1<size; x1++) {
+  for(let x2=0; x2<size; x2++){
+    if((x1+x2) % 2===0){
+      board += " ";
+    } else {
+      board +="#";
+    }
+  }
+  board +="\n"; //Creates a new line for the board.
+}
+console.log(board);
