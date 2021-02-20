@@ -21,4 +21,19 @@ const square= function(x) {
   console.log(power(2,10));
   
   //Bindings and Scopes
-  
+let x=10;
+if(true) {
+  let y=20;
+  var z=30;
+  console.log(x+y+z);
+}
+console.log(x+z); //Variable y was declared in the function, which is why it is undefined outside of the function. y is a local variable.
+
+const halve= function(n) {
+  return n/2; //need to have the return to show the value
+};
+let n=10;
+console.log(halve(100));
+console.log(n);
+
+//Nested Scope
